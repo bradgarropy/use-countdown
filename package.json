@@ -1,0 +1,67 @@
+{
+    "name": "react-library-starter",
+    "version": "1.0.0",
+    "description": "⚛ react library starter",
+    "keywords": [
+        "javascript",
+        "typescript",
+        "react",
+        "tsdx",
+        "eslint",
+        "prettier",
+        "starter"
+    ],
+    "homepage": "https://github.com/bradgarropy/react-library-starter",
+    "bugs": {
+        "url": "https://github.com/bradgarropy/react-library-starter/issues"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "Brad Garropy",
+        "email": "bradgarropy@gmail.com",
+        "url": "https://bradgarropy.com"
+    },
+    "files": [
+        "dist"
+    ],
+    "main": "dist/index.js",
+    "module": "dist/react-library-starter.esm.js",
+    "typings": "dist/index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bradgarropy/react-library-starter"
+    },
+    "scripts": {
+        "start": "tsdx watch",
+        "build": "tsdx build",
+        "test": "tsdx test --passWithNoTests",
+        "lint": "tsdx lint",
+        "prepare": "tsdx build"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@bradgarropy/eslint-config": "^1.1.0",
+        "@bradgarropy/eslint-config-react": "^1.0.0",
+        "@size-limit/preset-small-lib": "^4.9.1",
+        "@types/react": "^17.0.0",
+        "@types/react-dom": "^17.0.0",
+        "babel-eslint": "^10.1.0",
+        "eslint": "^7.18.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.22.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "tsdx": "^0.14.1",
+        "tslib": "^2.1.0",
+        "typescript": "^4.1.3"
+    },
+    "peerDependencies": {
+        "react": ">=16"
+    },
+    "engines": {
+        "node": ">=10"
+    }
+}
