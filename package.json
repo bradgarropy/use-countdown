@@ -1,19 +1,17 @@
 {
-    "name": "react-library-starter",
-    "version": "1.0.0",
-    "description": "⚛ react library starter",
+    "name": "@bradgarropy/use-countdown",
+    "version": "0.0.1",
+    "description": "⏳ useCountdown hook",
     "keywords": [
         "javascript",
         "typescript",
         "react",
-        "tsdx",
-        "eslint",
-        "prettier",
-        "starter"
+        "react-hook",
+        "countdown"
     ],
-    "homepage": "https://github.com/bradgarropy/react-library-starter",
+    "homepage": "https://github.com/bradgarropy/use-countdown",
     "bugs": {
-        "url": "https://github.com/bradgarropy/react-library-starter/issues"
+        "url": "https://github.com/bradgarropy/use-countdown/issues"
     },
     "license": "MIT",
     "author": {
@@ -25,11 +23,11 @@
         "dist"
     ],
     "main": "dist/index.js",
-    "module": "dist/react-library-starter.esm.js",
+    "module": "dist/use-countdown.esm.js",
     "typings": "dist/index.d.ts",
     "repository": {
         "type": "git",
-        "url": "https://github.com/bradgarropy/react-library-starter"
+        "url": "https://github.com/bradgarropy/use-countdown"
     },
     "scripts": {
         "start": "tsdx watch",
