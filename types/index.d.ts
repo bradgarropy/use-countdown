@@ -1,4 +1,4 @@
 type Time = {
-    minutes?: number
-    seconds?: number
+    minutes: number
+    seconds: number
 }

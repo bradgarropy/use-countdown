@@ -1,15 +1,15 @@
-const calculateInitialTime = (units: {minutes: number; seconds: number}) => {
-    const initialMinutes = units.minutes * 60 * 1000
-    const initialSeconds = units.seconds * 1000
+const calculateInitialTime = ({minutes, seconds}: Time): number => {
+    const initialMinutes = minutes * 60 * 1000
+    const initialSeconds = seconds * 1000
     const initialTime = initialMinutes + initialSeconds
 
     return initialTime
 }
 
-const calculateRemainingMinutes = (remainingTime: number) =>
+const calculateRemainingMinutes = (remainingTime: number): number =>
     Math.floor(remainingTime / (60 * 1000))
 
-const calculateRemainingSeconds = (remainingTime: number) =>
+const calculateRemainingSeconds = (remainingTime: number): number =>
     Math.floor((remainingTime / 1000) % 60)
 
 export {
