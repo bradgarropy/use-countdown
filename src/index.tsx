@@ -6,7 +6,12 @@ import {
     calculateRemainingSeconds,
 } from "./time"
 
-const useCountdown = ({minutes = 0, seconds = 0}) => {
+type useCountdownParams = {
+    minutes?: number
+    seconds?: number
+}
+
+const useCountdown = ({minutes = 0, seconds = 0}: useCountdownParams): Time => {
     const id = useRef(0)
 
     const [remainingTime, setRemainingTime] = useState(
