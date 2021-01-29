@@ -1,3 +1,5 @@
+import {Time} from "../types"
+
 const calculateInitialTime = ({minutes, seconds}: Time): number => {
     const initialMinutes = minutes * 60 * 1000
     const initialSeconds = seconds * 1000

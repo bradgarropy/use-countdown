@@ -1,5 +1,6 @@
 import {useEffect, useRef, useState} from "react"
 
+import {Time} from "../types"
 import {
     calculateInitialTime,
     calculateRemainingMinutes,

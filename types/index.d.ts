@@ -1,4 +1,4 @@
-type Time = {
+export type Time = {
     minutes: number
     seconds: number
 }
