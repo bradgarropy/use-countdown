@@ -57,8 +57,8 @@ const App = () => {
 
 | Name      | Required | Default | Example | Description        |
 | :-------- | :------: | :-----: | :-----: | :----------------- |
-| `minutes` |    ✔     |   `0`   |   `1`   | Countdown minutes. |
-| `seconds` |          |   `0`   |  `30`   | Countdown seconds. |
+| `minutes` | `false`  |   `0`   |   `1`   | Countdown minutes. |
+| `seconds` | `false`  |   `0`   |  `30`   | Countdown seconds. |
 
 Starts a countdown timer based on the number of minutes and seconds provided. The returned `countdown` object updates once per second and stops when the timer hits zero.
 
