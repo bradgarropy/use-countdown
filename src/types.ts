@@ -1,6 +1,6 @@
 /**
  * @name Time
- * @description Time represented as an object with minutes and seconds
+ * @description Time as minutes and seconds.
  */
 type Time = {
     minutes: number

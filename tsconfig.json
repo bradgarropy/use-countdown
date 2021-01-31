@@ -5,7 +5,7 @@
         "lib": ["dom", "esnext"],
         "importHelpers": true,
         "declaration": true,
-        "declarationDir": "types",
+        "declarationDir": "dist/types",
         "sourceMap": true,
         "strict": true,
         "noImplicitReturns": true,
