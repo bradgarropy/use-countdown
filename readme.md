@@ -9,11 +9,11 @@
 </a>
 
 <a href="https://bundlephobia.com/result?p=@bradgarropy/use-countdown">
-    <img alt="npm" src="https://img.shields.io/bundlephobia/min/@bradgarropy/use-countdown?style=flat-square">
+    <img alt="npm" src="https://img.shields.io/bundlephobia/minzip/@bradgarropy/use-countdown?style=flat-square">
 </a>
 
 <a href="https://github.com/bradgarropy/use-countdown/actions">
-    <img alt="npm" src="https://img.shields.io/github/workflow/status/bradgarropy/use-countdown/release?style=flat-square">
+    <img alt="npm" src="https://img.shields.io/github/workflow/status/bradgarropy/use-countdown/%F0%9F%9A%80%20release?style=flat-square">
 </a>
 
 <a href="https://www.typescriptlang.org/dt/search?search=%40bradgarropy%2Fuse-countdown">
