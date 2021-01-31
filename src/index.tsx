@@ -12,6 +12,10 @@ type useCountdownParams = {
     seconds?: number
 }
 
+/**
+ * @name useCountdown
+ * @description React hook countdown timer.
+ */
 const useCountdown = ({minutes = 0, seconds = 0}: useCountdownParams): Time => {
     const id = useRef(0)
 
@@ -44,3 +48,4 @@ const useCountdown = ({minutes = 0, seconds = 0}: useCountdownParams): Time => {
 }
 
 export default useCountdown
+export {Time}
