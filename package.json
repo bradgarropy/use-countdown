@@ -23,7 +23,8 @@
         "url": "https://bradgarropy.com"
     },
     "files": [
-        "dist"
+        "dist",
+        "types"
     ],
     "main": "dist/index.js",
     "module": "dist/use-countdown.esm.js",
