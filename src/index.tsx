@@ -43,4 +43,4 @@ const useCountdown = ({minutes = 0, seconds = 0}: useCountdownParams): Time => {
     return countdown
 }
 
-export default useCountdown
+export {useCountdown as default, Time, useCountdown}
