@@ -27,7 +27,7 @@
     ],
     "main": "dist/index.js",
     "module": "dist/use-countdown.esm.js",
-    "types": "dist/types/index.d.ts",
+    "types": "types/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/bradgarropy/use-countdown"
