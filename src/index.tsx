@@ -1,11 +1,11 @@
 import {useEffect, useRef, useState} from "react"
 
-import {Time} from "../types"
 import {
     calculateInitialTime,
     calculateRemainingMinutes,
     calculateRemainingSeconds,
 } from "./time"
+import {Time} from "./types"
 
 type useCountdownParams = {
     minutes?: number

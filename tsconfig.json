@@ -1,11 +1,11 @@
 {
-    // see https://www.typescriptlang.org/tsconfig to better understand tsconfigs
     "include": ["src", "types"],
     "compilerOptions": {
         "module": "esnext",
         "lib": ["dom", "esnext"],
         "importHelpers": true,
         "declaration": true,
+        "declarationDir": "dist/types",
         "sourceMap": true,
         "rootDir": "./src",
         "strict": true,
