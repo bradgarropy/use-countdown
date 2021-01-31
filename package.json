@@ -1,10 +1,13 @@
 {
     "name": "@bradgarropy/use-countdown",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "⏳ useCountdown hook",
     "keywords": [
         "javascript",
         "typescript",
+        "eslint",
+        "prettier",
+        "tsdx",
         "react",
         "react-hook",
         "countdown"
@@ -41,7 +44,6 @@
         "@bradgarropy/eslint-config": "^1.1.0",
         "@bradgarropy/eslint-config-react": "^1.0.0",
         "@bradgarropy/eslint-config-typescript": "^1.0.0",
-        "@size-limit/preset-small-lib": "^4.9.1",
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "@typescript-eslint/eslint-plugin": "^4.14.1",
