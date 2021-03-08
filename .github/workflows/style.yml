@@ -1,12 +1,10 @@
-name: "🚀 release"
+name: "💎 style"
 
-on:
-    release:
-        types: [published]
+on: pull_request
 
 jobs:
-    release:
-        name: "🚀 release"
+    style:
+        name: "💎 style"
         runs-on: ubuntu-latest
         steps:
             - name: "📚 checkout"
@@ -22,11 +20,3 @@ jobs:
               run: npm run lint
             - name: "💾 format"
               run: npm run format
-            - name: "🧪 test"
-              run: npm run test
-            - name: "☂️ coverage"
-              uses: codecov/codecov-action@v1.2.1
-            - name: "🚀 publish"
-              run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

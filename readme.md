@@ -1,28 +1,14 @@
 # ⏳ useCountdown hook
 
-<a href="https://www.npmjs.com/package/@bradgarropy/use-countdown">
-    <img alt="npm" src="https://img.shields.io/npm/v/@bradgarropy/use-countdown.svg?style=flat-square">
-</a>
-
-<a href="https://www.npmjs.com/package/@bradgarropy/use-countdown">
-    <img alt="npm" src="https://img.shields.io/npm/dt/@bradgarropy/use-countdown?style=flat-square">
-</a>
-
-<a href="https://bundlephobia.com/result?p=@bradgarropy/use-countdown">
-    <img alt="npm" src="https://img.shields.io/bundlephobia/minzip/@bradgarropy/use-countdown?style=flat-square">
-</a>
-
-<a href="https://github.com/bradgarropy/use-countdown/actions">
-    <img alt="npm" src="https://img.shields.io/github/workflow/status/bradgarropy/use-countdown/%F0%9F%9A%80%20release?style=flat-square">
-</a>
-
-<a href="https://www.typescriptlang.org/dt/search?search=%40bradgarropy%2Fuse-countdown">
-    <img alt="npm" src="https://img.shields.io/npm/types/@bradgarropy/use-countdown?style=flat-square">
-</a>
-
-<a href="https://bradgarropy.com/discord">
-    <img alt="npm" src="https://img.shields.io/discord/748196643140010015?style=flat-square">
-</a>
+[![version][version-badge]][npm]
+[![downloads][downloads-badge]][npm]
+[![size][size-badge]][bundlephobia]
+[![github actions][github-actions-badge]][github-actions]
+[![codecov][codecov-badge]][codecov]
+[![typescript][typescript-badge]][typescript]
+[![contributing][contributing-badge]][contributing]
+[![contributors][contributors-badge]][contributors]
+[![discord][discord-badge]][discord]
 
 _[React][react] hook countdown timer. As seen on my [Twitch][twitch] streams._
 
@@ -74,6 +60,22 @@ const countdown = useCountdown({seconds: 10})
 📢 provide feedback with [issues][issues] or on [twitter][twitter]  
 🙋🏼‍♂️ use my [ama][ama] or [twitter][twitter] to ask any other questions
 
+## ✨ Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/bradgarropy/use-countdown/commits?author=bradgarropy" title="Code">💻</a> <a href="https://github.com/bradgarropy/use-countdown/commits?author=bradgarropy" title="Documentation">📖</a> <a href="https://github.com/bradgarropy/use-countdown/commits?author=bradgarropy" title="Tests">⚠️</a> <a href="#infra-bradgarropy" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
 [issues]: https://github.com/bradgarropy/use-countdown/issues
 [ama]: https://bradgarropy.com/ama
 [twitter]: https://twitter.com/bradgarropy
@@ -81,3 +83,19 @@ const countdown = useCountdown({seconds: 10})
 [twitch]: https://twitch.tv/bradgarropy
 [npm]: https://www.npmjs.com/package/@bradgarropy/use-countdown
 [hooks]: https://reactjs.org/docs/hooks-intro.html
+[bundlephobia]: https://bundlephobia.com/result?p=@bradgarropy/use-countdown
+[github-actions]: https://github.com/bradgarropy/use-countdown/actions
+[codecov]: https://app.codecov.io/gh/bradgarropy/use-countdown
+[typescript]: https://www.typescriptlang.org/dt/search?search=%40bradgarropy%2Fuse-countdown
+[contributing]: https://github.com/bradgarropy/use-countdown/blob/master/contributing.md
+[contributors]: #-Contributors
+[discord]: https://bradgarropy.com/discord
+[version-badge]: https://img.shields.io/npm/v/@bradgarropy/use-countdown.svg?style=flat-square
+[downloads-badge]: https://img.shields.io/npm/dt/@bradgarropy/use-countdown?style=flat-square
+[size-badge]: https://img.shields.io/bundlephobia/minzip/@bradgarropy/use-countdown?style=flat-square
+[github-actions-badge]: https://img.shields.io/github/workflow/status/bradgarropy/use-countdown/%F0%9F%9A%80%20release?style=flat-square
+[codecov-badge]: https://img.shields.io/codecov/c/github/bradgarropy/use-countdown?style=flat-square
+[typescript-badge]: https://img.shields.io/npm/types/@bradgarropy/use-countdown?style=flat-square
+[contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
+[contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/use-countdown?style=flat-square
+[discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square
