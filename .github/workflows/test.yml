@@ -1,12 +1,14 @@
-name: "🚀 release"
+name: "🧪 test"
 
 on:
-    release:
-        types: [published]
+    push:
+        branches:
+            - master
+    pull_request:
 
 jobs:
-    release:
-        name: "🚀 release"
+    test:
+        name: "🧪 test"
         runs-on: ubuntu-latest
         steps:
             - name: "📚 checkout"
@@ -18,15 +20,7 @@ jobs:
                   registry-url: https://registry.npmjs.org/
             - name: "📦 install"
               run: npm ci
-            - name: "🧶 lint"
-              run: npm run lint
-            - name: "💾 format"
-              run: npm run format
             - name: "🧪 test"
               run: npm run test
             - name: "☂️ coverage"
               uses: codecov/codecov-action@v1.2.1
-            - name: "🚀 publish"
-              run: npm publish --access public
-              env:
-                  NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}

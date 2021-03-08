@@ -6,6 +6,7 @@
         "importHelpers": true,
         "declaration": true,
         "declarationDir": "dist/types",
+        "outDir": "dist",
         "sourceMap": true,
         "strict": true,
         "noImplicitReturns": true,
@@ -14,10 +15,9 @@
         "noUnusedParameters": true,
         "moduleResolution": "node",
         "jsx": "react",
-        "removeComments": false,
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "noEmit": true
+        "noEmit": false
     }
 }

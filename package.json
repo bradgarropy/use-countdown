@@ -1,13 +1,12 @@
 {
     "name": "@bradgarropy/use-countdown",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "⏳ useCountdown hook",
     "keywords": [
         "javascript",
         "typescript",
         "eslint",
         "prettier",
-        "tsdx",
         "react",
         "react-hook",
         "countdown"
@@ -26,28 +25,34 @@
         "dist"
     ],
     "main": "dist/index.js",
-    "module": "dist/use-countdown.esm.js",
     "types": "dist/types/index.d.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/bradgarropy/use-countdown"
     },
     "scripts": {
-        "start": "tsdx watch",
-        "build": "tsdx build",
-        "test": "tsdx test --passWithNoTests",
-        "lint": "tsdx lint",
-        "prepare": "tsdx build"
+        "start": "tsc --watch",
+        "build": "tsc",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix .",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write .",
+        "test": "jest --passWithNoTests",
+        "test:watch": "jest --passWithNoTests --watch",
+        "contributors": "all-contributors generate",
+        "prepare": "tsc"
     },
     "dependencies": {},
     "devDependencies": {
         "@bradgarropy/eslint-config": "^1.1.0",
         "@bradgarropy/eslint-config-react": "^1.0.0",
         "@bradgarropy/eslint-config-typescript": "^1.0.0",
+        "@types/jest": "^26.0.20",
         "@types/react": "^17.0.0",
         "@types/react-dom": "^17.0.0",
         "@typescript-eslint/eslint-plugin": "^4.14.1",
         "@typescript-eslint/parser": "^4.14.1",
+        "all-contributors-cli": "^6.20.0",
         "babel-eslint": "^10.1.0",
         "eslint": "^7.18.0",
         "eslint-config-prettier": "^7.2.0",
@@ -55,9 +60,13 @@
         "eslint-plugin-react": "^7.22.0",
         "eslint-plugin-react-hooks": "^4.2.0",
         "eslint-plugin-simple-import-sort": "^7.0.0",
+        "husky": "^5.1.3",
+        "jest": "^26.6.3",
+        "lint-staged": "^10.5.4",
+        "prettier": "^2.2.1",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
-        "tsdx": "^0.14.1",
+        "ts-jest": "^26.5.3",
         "tslib": "^2.1.0",
         "typescript": "^4.1.3"
     },
