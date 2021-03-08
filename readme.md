@@ -1,5 +1,6 @@
 # ⏳ useCountdown hook
 
+<!-- TODO: fix badges -->
 <a href="https://www.npmjs.com/package/@bradgarropy/use-countdown">
     <img alt="npm" src="https://img.shields.io/npm/v/@bradgarropy/use-countdown.svg?style=flat-square">
 </a>

@@ -2,6 +2,8 @@ import {renderHook} from "@testing-library/react-hooks"
 
 import useCountdown from "../src"
 
+// TODO: fake timers
+
 test("shows initial time", () => {
     const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
     expect(result.current).toEqual({minutes: 1, seconds: 30})
