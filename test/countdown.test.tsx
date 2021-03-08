@@ -1,8 +1,8 @@
-import {renderHook} from "@testing-library/react-hooks"
+import {act, renderHook} from "@testing-library/react-hooks"
 
 import useCountdown from "../src"
 
-// TODO: fake timers
+jest.useFakeTimers()
 
 test("shows initial time", () => {
     const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
@@ -25,19 +25,21 @@ test("default minutes and seconds", () => {
 })
 
 test("counts down", async () => {
-    const {result, waitForNextUpdate} = renderHook(() =>
-        useCountdown({minutes: 1, seconds: 30}),
-    )
+    const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
 
-    await waitForNextUpdate({timeout: 2000})
+    act(() => {
+        jest.advanceTimersByTime(1000)
+    })
+
     expect(result.current).toEqual({minutes: 1, seconds: 29})
 })
 
 test("stops", async () => {
-    const {result, waitForNextUpdate} = renderHook(() =>
-        useCountdown({seconds: 1}),
-    )
+    const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
 
-    await waitForNextUpdate({timeout: 2000})
+    act(() => {
+        jest.runAllTimers()
+    })
+
     expect(result.current).toEqual({minutes: 0, seconds: 0})
 })
