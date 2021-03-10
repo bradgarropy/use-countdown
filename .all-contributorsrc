@@ -33,6 +33,16 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "jamesqquick",
+      "name": "James Q Quick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5391915?v=4",
+      "profile": "http://jamesqquick.com",
+      "contributions": [
+        "ideas",
+        "userTesting"
+      ]
     }
   ]
 }
