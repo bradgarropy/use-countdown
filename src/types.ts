@@ -7,4 +7,14 @@ type Time = {
     seconds: number
 }
 
-export {Time}
+/**
+ * @name Countdown
+ * @description State of the countdown timer.
+ */
+type Countdown = {
+    minutes: number
+    seconds: number
+    formatted: string
+}
+
+export {Countdown, Time}

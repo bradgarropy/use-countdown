@@ -1,3 +1,4 @@
+import {format as formatTime} from "date-fns"
 import {useEffect, useRef, useState} from "react"
 
 import {
@@ -5,11 +6,12 @@ import {
     calculateRemainingMinutes,
     calculateRemainingSeconds,
 } from "./time"
-import {Time} from "./types"
+import {Countdown} from "./types"
 
 type useCountdownParams = {
     minutes?: number
     seconds?: number
+    format?: string
 }
 
 /**
@@ -19,7 +21,8 @@ type useCountdownParams = {
 const useCountdown = ({
     minutes = 0,
     seconds = 0,
-}: useCountdownParams = {}): Time => {
+    format = "mm:ss",
+}: useCountdownParams = {}): Countdown => {
     const id = useRef(0)
 
     const [remainingTime, setRemainingTime] = useState(
@@ -42,9 +45,10 @@ const useCountdown = ({
         })
     }
 
-    const countdown = {
+    const countdown: Countdown = {
         minutes: calculateRemainingMinutes(remainingTime),
         seconds: calculateRemainingSeconds(remainingTime),
+        formatted: formatTime(remainingTime, format),
     }
 
     return countdown
