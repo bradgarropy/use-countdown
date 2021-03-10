@@ -1,23 +1,21 @@
-import "react-app-polyfill/ie11"
-
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 
-import useCountdown, {Time} from "../."
+import useCountdown from "../."
 
 const App = () => {
-    const time: Time = {minutes: 1, seconds: 30}
-    const countdown = useCountdown(time)
+    const countdown = useCountdown({
+        minutes: 1,
+        seconds: 30,
+        format: "mm:ss",
+    })
 
     console.log(countdown)
-
-    const minutes = countdown.minutes.toString().padStart(2, "0")
-    const seconds = countdown.seconds.toString().padStart(2, "0")
 
     return (
         <>
             <h1>⏳ useCountdown hook</h1>
-            <h2>{`${minutes}:${seconds}`}</h2>
+            <h2>{countdown.formatted}</h2>
         </>
     )
 }

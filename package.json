@@ -42,7 +42,9 @@
         "contributors": "all-contributors generate",
         "prepare": "tsc"
     },
-    "dependencies": {},
+    "dependencies": {
+        "date-fns": "^2.19.0"
+    },
     "devDependencies": {
         "@bradgarropy/eslint-config": "^1.1.0",
         "@bradgarropy/eslint-config-react": "^1.0.0",

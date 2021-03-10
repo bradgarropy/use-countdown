@@ -28,12 +28,12 @@ In any React component, import `useCountdown`, then call it like any other [hook
 import useCountdown from "@bradgarropy/use-countdown"
 
 const App = () => {
-    const countdown = useCountdown({minutes: 1, seconds: 30})
+    const countdown = useCountdown({minutes: 1, seconds: 30, format: "mm:ss"})
     console.log(countdown)
 
-    // {minutes: 1, seconds: 30}
-    // {minutes: 1, seconds: 29}
-    // {minutes: 1, seconds: 28}
+    // {minutes: 1, seconds: 30, formatted: "01:30"}
+    // {minutes: 1, seconds: 29, formatted: "01:29"}
+    // {minutes: 1, seconds: 28, formatted: "01:28"}
 }
 ```
 
@@ -41,17 +41,36 @@ const App = () => {
 
 ### `useCountdown({minutes, seconds})`
 
-| Name      | Required | Default | Example | Description        |
-| :-------- | :------: | :-----: | :-----: | :----------------- |
-| `minutes` | `false`  |   `0`   |   `1`   | Countdown minutes. |
-| `seconds` | `false`  |   `0`   |  `30`   | Countdown seconds. |
+| Name      | Required | Default |  Example   | Description                          |
+| :-------- | :------: | :-----: | :--------: | :----------------------------------- |
+| `minutes` | `false`  |   `0`   |    `1`     | Countdown minutes.                   |
+| `seconds` | `false`  |   `0`   |    `30`    | Countdown seconds.                   |
+| `format`  | `false`  | `mm:ss` | `mm:ss:SS` | Format string ([reference][format]). |
 
 Starts a countdown timer based on the number of minutes and seconds provided. The returned `countdown` object updates once per second and stops when the timer hits zero.
 
+The `format` parameter is a [`date-fns`][date-fns] format string.
+
 ```javascript
-const countdown = useCountdown({minutes: 1, seconds: 30})
+const countdown = useCountdown({minutes: 1, seconds: 30, format: "mm:ss:SS"})
 const countdown = useCountdown({minutes: 5})
 const countdown = useCountdown({seconds: 10})
+```
+
+The return object is updated every second until the countdown timer ends.
+
+| Name        | Example | Description               |
+| :---------- | :-----: | :------------------------ |
+| `minutes`   |   `1`   | Remaining minutes.        |
+| `seconds`   |  `30`   | Remaining seconds.        |
+| `formatted` | `01:30` | Formatted remaining time. |
+
+```javascript
+{
+  minutes: 1,
+  seconds: 30,
+  formatted: "01:30",
+}
 ```
 
 ## ❔ Questions
@@ -99,3 +118,5 @@ const countdown = useCountdown({seconds: 10})
 [contributing-badge]: https://img.shields.io/badge/PRs-welcome-success?style=flat-square
 [contributors-badge]: https://img.shields.io/github/all-contributors/bradgarropy/use-countdown?style=flat-square
 [discord-badge]: https://img.shields.io/discord/748196643140010015?style=flat-square
+[date-fns]: https://date-fns.org
+[format]: https://date-fns.org/docs/format
