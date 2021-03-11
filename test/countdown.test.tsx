@@ -56,7 +56,7 @@ test("default minutes and seconds", () => {
     })
 })
 
-test("counts down", async () => {
+test("counts down", () => {
     const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
 
     act(() => {
@@ -70,7 +70,7 @@ test("counts down", async () => {
     })
 })
 
-test("stops", async () => {
+test("stops", () => {
     const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
 
     act(() => {
@@ -84,7 +84,7 @@ test("stops", async () => {
     })
 })
 
-test("runs on completed callback", async () => {
+test("runs on completed callback", () => {
     const onCompletedMock = jest.fn()
 
     renderHook(() =>
