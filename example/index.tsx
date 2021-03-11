@@ -5,9 +5,10 @@ import useCountdown from "../."
 
 const App = () => {
     const countdown = useCountdown({
-        minutes: 1,
-        seconds: 30,
+        minutes: 0,
+        seconds: 5,
         format: "mm:ss",
+        onCompleted: () => console.log("onCompleted"),
     })
 
     console.log(countdown)

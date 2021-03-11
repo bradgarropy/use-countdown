@@ -28,12 +28,21 @@ In any React component, import `useCountdown`, then call it like any other [hook
 import useCountdown from "@bradgarropy/use-countdown"
 
 const App = () => {
-    const countdown = useCountdown({minutes: 1, seconds: 30, format: "mm:ss"})
+    const countdown = useCountdown({
+        minutes: 1,
+        seconds: 30,
+        format: "mm:ss",
+        onCompleted: () => console.log("onCompleted"),
+    })
+
     console.log(countdown)
 
     // {minutes: 1, seconds: 30, formatted: "01:30"}
     // {minutes: 1, seconds: 29, formatted: "01:29"}
     // {minutes: 1, seconds: 28, formatted: "01:28"}
+    // ...
+    // {minutes: 0, seconds: 0, formatted: "00:00"}
+    // onCompleted
 }
 ```
 
@@ -41,20 +50,35 @@ const App = () => {
 
 ### `useCountdown({minutes, seconds})`
 
-| Name      | Required | Default |  Example   | Description                          |
-| :-------- | :------: | :-----: | :--------: | :----------------------------------- |
-| `minutes` | `false`  |   `0`   |    `1`     | Countdown minutes.                   |
-| `seconds` | `false`  |   `0`   |    `30`    | Countdown seconds.                   |
-| `format`  | `false`  | `mm:ss` | `mm:ss:SS` | Format string ([reference][format]). |
+| Name          | Required |   Default   |  Example   | Description                                |
+| :------------ | :------: | :---------: | :--------: | :----------------------------------------- |
+| `minutes`     | `false`  |     `0`     |    `1`     | Countdown minutes.                         |
+| `seconds`     | `false`  |     `0`     |    `30`    | Countdown seconds.                         |
+| `format`      | `false`  |   `mm:ss`   | `mm:ss:SS` | Format string ([reference][format]).       |
+| `onCompleted` | `false`  | `undefined` | `function` | Function to call when countdown completes. |
 
 Starts a countdown timer based on the number of minutes and seconds provided. The returned `countdown` object updates once per second and stops when the timer hits zero.
 
 The `format` parameter is a [`date-fns`][date-fns] format string.
 
+If provided, the `onCompleted` function will be called when the countdown completes.
+
+Here are some examples of how to call `useCountdown`.
+
 ```javascript
-const countdown = useCountdown({minutes: 1, seconds: 30, format: "mm:ss:SS"})
-const countdown = useCountdown({minutes: 5})
-const countdown = useCountdown({seconds: 10})
+const countdown = useCountdown({
+    minutes: 1,
+    seconds: 30,
+    format: "mm:ss:SS",
+    onCompleted: () => console.log("onCompleted"),
+})
+
+const countdown = useCountdown({
+    minutes: 5,
+    onCompleted: () => console.log("onCompleted"),
+})
+
+const countdown = useCountdown({seconds: 10, format: "mm:ss:SS"})
 ```
 
 The return object is updated every second until the countdown timer ends.
@@ -64,6 +88,8 @@ The return object is updated every second until the countdown timer ends.
 | `minutes`   |   `1`   | Remaining minutes.        |
 | `seconds`   |  `30`   | Remaining seconds.        |
 | `formatted` | `01:30` | Formatted remaining time. |
+
+Here is an example of the returned object.
 
 ```javascript
 {

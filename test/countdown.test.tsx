@@ -83,3 +83,17 @@ test("stops", async () => {
         formatted: "00:00",
     })
 })
+
+test("runs on completed callback", async () => {
+    const onCompletedMock = jest.fn()
+
+    renderHook(() =>
+        useCountdown({minutes: 1, seconds: 30, onCompleted: onCompletedMock}),
+    )
+
+    act(() => {
+        jest.runAllTimers()
+    })
+
+    expect(onCompletedMock).toHaveBeenCalledTimes(1)
+})

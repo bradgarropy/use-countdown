@@ -12,6 +12,7 @@ type useCountdownParams = {
     minutes?: number
     seconds?: number
     format?: string
+    onCompleted?: VoidFunction
 }
 
 /**
@@ -22,6 +23,7 @@ const useCountdown = ({
     minutes = 0,
     seconds = 0,
     format = "mm:ss",
+    onCompleted,
 }: useCountdownParams = {}): Countdown => {
     const id = useRef(0)
 
@@ -29,15 +31,21 @@ const useCountdown = ({
         calculateInitialTime({minutes, seconds}),
     )
 
-    useEffect(() => {
-        id.current = window.setInterval(calculateRemainingTime, 1000)
-        return () => window.clearInterval(id.current)
-    }, [])
+    useEffect(
+        () => {
+            id.current = window.setInterval(calculateRemainingTime, 1000)
+            return () => window.clearInterval(id.current)
+        },
+
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        [],
+    )
 
     const calculateRemainingTime = () => {
         setRemainingTime(time => {
             if (time - 1000 <= 0) {
                 clearInterval(id.current)
+                onCompleted?.()
                 return 0
             }
 
