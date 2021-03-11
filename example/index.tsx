@@ -8,6 +8,7 @@ const App = () => {
         minutes: 1,
         seconds: 30,
         format: "mm:ss",
+        onCompleted: () => console.log("onCompleted"),
     })
 
     console.log(countdown)
