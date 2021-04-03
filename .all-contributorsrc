@@ -43,6 +43,16 @@
         "ideas",
         "userTesting"
       ]
+    },
+    {
+      "login": "StevenCreates",
+      "name": "Steven Hofheins",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37391025?v=4",
+      "profile": "http://stevencreates.tech",
+      "contributions": [
+        "blog",
+        "tutorial"
+      ]
     }
   ]
 }
