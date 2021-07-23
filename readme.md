@@ -12,6 +12,12 @@
 
 _[React][react] hook countdown timer. As seen on my [Twitch][twitch] streams._
 
+<p align="center">
+    <a href="https://www.npmjs.com/package/@bradgarropy/use-countdown">
+        <img alt="next link" src="./images/github.png" width="500">
+    </a>
+</p>
+
 ## 📦 Installation
 
 This package is hosted on [npm][npm].
