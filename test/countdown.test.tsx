@@ -7,7 +7,7 @@ jest.useFakeTimers()
 test("shows initial time", () => {
     const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
 
-    expect(result.current).toEqual({
+    expect(result.current).toMatchObject({
         minutes: 1,
         seconds: 30,
         formatted: "01:30",
@@ -19,7 +19,7 @@ test("formats time", () => {
         useCountdown({minutes: 1, seconds: 30, format: "mm:ss:SS"}),
     )
 
-    expect(result.current).toEqual({
+    expect(result.current).toMatchObject({
         minutes: 1,
         seconds: 30,
         formatted: "01:30:00",
@@ -29,7 +29,7 @@ test("formats time", () => {
 test("default minutes", () => {
     const {result} = renderHook(() => useCountdown({seconds: 30}))
 
-    expect(result.current).toEqual({
+    expect(result.current).toMatchObject({
         minutes: 0,
         seconds: 30,
         formatted: "00:30",
@@ -39,7 +39,7 @@ test("default minutes", () => {
 test("default seconds", () => {
     const {result} = renderHook(() => useCountdown({minutes: 1}))
 
-    expect(result.current).toEqual({
+    expect(result.current).toMatchObject({
         minutes: 1,
         seconds: 0,
         formatted: "01:00",
@@ -49,7 +49,7 @@ test("default seconds", () => {
 test("default minutes and seconds", () => {
     const {result} = renderHook(() => useCountdown())
 
-    expect(result.current).toEqual({
+    expect(result.current).toMatchObject({
         minutes: 0,
         seconds: 0,
         formatted: "00:00",
@@ -63,10 +63,48 @@ test("counts down", () => {
         jest.advanceTimersByTime(1000)
     })
 
-    expect(result.current).toEqual({
+    expect(result.current).toMatchObject({
         minutes: 1,
         seconds: 29,
         formatted: "01:29",
+    })
+})
+
+test("pauses and resumes", () => {
+    const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
+
+    act(() => {
+        jest.advanceTimersByTime(1000)
+    })
+
+    expect(result.current).toMatchObject({
+        minutes: 1,
+        seconds: 29,
+        formatted: "01:29",
+    })
+
+    result.current.pause()
+
+    act(() => {
+        jest.advanceTimersByTime(1000)
+    })
+
+    expect(result.current).toMatchObject({
+        minutes: 1,
+        seconds: 29,
+        formatted: "01:29",
+    })
+
+    result.current.resume()
+
+    act(() => {
+        jest.advanceTimersByTime(1000)
+    })
+
+    expect(result.current).toMatchObject({
+        minutes: 1,
+        seconds: 28,
+        formatted: "01:28",
     })
 })
 
@@ -77,7 +115,7 @@ test("stops", () => {
         jest.runAllTimers()
     })
 
-    expect(result.current).toEqual({
+    expect(result.current).toMatchObject({
         minutes: 0,
         seconds: 0,
         formatted: "00:00",

@@ -53,10 +53,20 @@ const useCountdown = ({
         })
     }
 
+    const pause = (): void => {
+        window.clearInterval(id.current)
+    }
+
+    const resume = (): void => {
+        id.current = window.setInterval(calculateRemainingTime, 1000)
+    }
+
     const countdown: Countdown = {
         minutes: calculateRemainingMinutes(remainingTime),
         seconds: calculateRemainingSeconds(remainingTime),
         formatted: formatTime(remainingTime, format),
+        pause,
+        resume,
     }
 
     return countdown
