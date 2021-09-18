@@ -53,6 +53,15 @@
         "blog",
         "tutorial"
       ]
+    },
+    {
+      "login": "rpxs",
+      "name": "Jack Reiker",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66899904?v=4",
+      "profile": "http://fish.solar",
+      "contributions": [
+        "ideas"
+      ]
     }
   ]
 }
