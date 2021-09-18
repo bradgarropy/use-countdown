@@ -104,6 +104,8 @@ Here is an example of the returned object.
   minutes: 1,
   seconds: 30,
   formatted: "01:30",
+  pause: () => {},
+  resume: () => {},
 }
 ```
 
