@@ -43,11 +43,11 @@ const App = () => {
 
     console.log(countdown)
 
-    // {minutes: 1, seconds: 30, formatted: "01:30"}
-    // {minutes: 1, seconds: 29, formatted: "01:29"}
-    // {minutes: 1, seconds: 28, formatted: "01:28"}
+    // {minutes: 1, seconds: 30, formatted: "01:30", ...}
+    // {minutes: 1, seconds: 29, formatted: "01:29", ...}
+    // {minutes: 1, seconds: 28, formatted: "01:28", ...}
     // ...
-    // {minutes: 0, seconds: 0, formatted: "00:00"}
+    // {minutes: 0, seconds: 0, formatted: "00:00", ...}
     // onCompleted
 }
 ```
@@ -89,11 +89,13 @@ const countdown = useCountdown({seconds: 10, format: "mm:ss:SS"})
 
 The return object is updated every second until the countdown timer ends.
 
-| Name        | Example | Description               |
-| :---------- | :-----: | :------------------------ |
-| `minutes`   |   `1`   | Remaining minutes.        |
-| `seconds`   |  `30`   | Remaining seconds.        |
-| `formatted` | `01:30` | Formatted remaining time. |
+| Name        |    Type    |  Example   | Description                  |
+| :---------- | :--------: | :--------: | :--------------------------- |
+| `minutes`   |  `number`  |    `1`     | Remaining minutes.           |
+| `seconds`   |  `number`  |    `30`    | Remaining seconds.           |
+| `formatted` |  `string`  |  `01:30`   | Formatted remaining time.    |
+| `pause`     | `function` | `function` | Pauses the countdown timer.  |
+| `resume`    | `function` | `function` | Resumes the countdown timer. |
 
 Here is an example of the returned object.
 

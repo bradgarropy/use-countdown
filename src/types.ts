@@ -15,6 +15,8 @@ type Countdown = {
     minutes: number
     seconds: number
     formatted: string
+    pause: VoidFunction
+    resume: VoidFunction
 }
 
 export {Countdown, Time}
