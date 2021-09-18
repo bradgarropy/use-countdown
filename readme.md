@@ -89,13 +89,13 @@ const countdown = useCountdown({seconds: 10, format: "mm:ss:SS"})
 
 The return object is updated every second until the countdown timer ends.
 
-| Name        |    Type    |  Example   | Description                  |
-| :---------- | :--------: | :--------: | :--------------------------- |
-| `minutes`   |  `number`  |    `1`     | Remaining minutes.           |
-| `seconds`   |  `number`  |    `30`    | Remaining seconds.           |
-| `formatted` |  `string`  |  `01:30`   | Formatted remaining time.    |
-| `pause`     | `function` | `function` | Pauses the countdown timer.  |
-| `resume`    | `function` | `function` | Resumes the countdown timer. |
+| Name        |    Type    |  Example   | Description               |
+| :---------- | :--------: | :--------: | :------------------------ |
+| `minutes`   |  `number`  |    `1`     | Remaining minutes.        |
+| `seconds`   |  `number`  |    `30`    | Remaining seconds.        |
+| `formatted` |  `string`  |  `01:30`   | Formatted remaining time. |
+| `pause`     | `function` | `function` | Pauses the countdown.     |
+| `resume`    | `function` | `function` | Resumes the countdown.    |
 
 Here is an example of the returned object.
 
