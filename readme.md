@@ -136,7 +136,7 @@ Here is an example of the returned object.
     <td align="center"><a href="https://www.mattscholta.com"><img src="https://avatars.githubusercontent.com/u/545829?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Matthew Scholta</b></sub></a><br /><a href="https://github.com/bradgarropy/use-countdown/commits?author=visormatt" title="Code">💻</a> <a href="https://github.com/bradgarropy/use-countdown/commits?author=visormatt" title="Documentation">📖</a></td>
     <td align="center"><a href="http://jamesqquick.com"><img src="https://avatars.githubusercontent.com/u/5391915?v=4?s=100" width="100px;" alt=""/><br /><sub><b>James Q Quick</b></sub></a><br /><a href="#ideas-jamesqquick" title="Ideas, Planning, & Feedback">🤔</a> <a href="#userTesting-jamesqquick" title="User Testing">📓</a></td>
     <td align="center"><a href="http://stevencreates.tech"><img src="https://avatars.githubusercontent.com/u/37391025?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steven Hofheins</b></sub></a><br /><a href="#blog-StevenCreates" title="Blogposts">📝</a> <a href="#tutorial-StevenCreates" title="Tutorials">✅</a></td>
-    <td align="center"><a href="http://fish.solar"><img src="https://avatars.githubusercontent.com/u/66899904?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Reiker</b></sub></a><br /><a href="#ideas-rpxs" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://fish.solar"><img src="https://avatars.githubusercontent.com/u/66899904?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Reiker</b></sub></a><br /><a href="#ideas-rpxs" title="Ideas, Planning, & Feedback">🤔</a> <a href="#userTesting-rpxs" title="User Testing">📓</a></td>
   </tr>
 </table>
 
