@@ -17,6 +17,7 @@ type Countdown = {
     formatted: string
     pause: VoidFunction
     resume: VoidFunction
+    reset: VoidFunction
 }
 
 export {Countdown, Time}

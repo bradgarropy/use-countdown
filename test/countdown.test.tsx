@@ -108,6 +108,32 @@ test("pauses and resumes", () => {
     })
 })
 
+test("resets", () => {
+    const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
+
+    act(() => {
+        jest.advanceTimersByTime(1000)
+    })
+
+    result.current.reset()
+
+    expect(result.current).toMatchObject({
+        minutes: 1,
+        seconds: 30,
+        formatted: "01:30",
+    })
+
+    act(() => {
+        jest.advanceTimersByTime(1000)
+    })
+
+    expect(result.current).toMatchObject({
+        minutes: 1,
+        seconds: 29,
+        formatted: "01:29",
+    })
+})
+
 test("stops", () => {
     const {result} = renderHook(() => useCountdown({minutes: 1, seconds: 30}))
 

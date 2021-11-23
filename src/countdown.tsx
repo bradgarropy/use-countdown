@@ -61,12 +61,19 @@ const useCountdown = ({
         id.current = window.setInterval(calculateRemainingTime, 1000)
     }
 
+    const reset = (): void => {
+        window.clearInterval(id.current)
+        id.current = window.setInterval(calculateRemainingTime, 1000)
+        setRemainingTime(calculateInitialTime({minutes, seconds}))
+    }
+
     const countdown: Countdown = {
         minutes: calculateRemainingMinutes(remainingTime),
         seconds: calculateRemainingSeconds(remainingTime),
         formatted: formatTime(remainingTime, format),
         pause,
         resume,
+        reset,
     }
 
     return countdown

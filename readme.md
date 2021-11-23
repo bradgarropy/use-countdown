@@ -96,16 +96,18 @@ The return object is updated every second until the countdown timer ends.
 | `formatted` |  `string`  |  `01:30`   | Formatted remaining time. |
 | `pause`     | `function` | `function` | Pauses the countdown.     |
 | `resume`    | `function` | `function` | Resumes the countdown.    |
+| `reset`     | `function` | `function` | Resets the countdown.     |
 
 Here is an example of the returned object.
 
 ```javascript
 {
-  minutes: 1,
-  seconds: 30,
-  formatted: "01:30",
-  pause: () => {},
-  resume: () => {},
+    minutes: 1,
+    seconds: 30,
+    formatted: "01:30",
+    pause: () => {},
+    resume: () => {},
+    reset: () => {},
 }
 ```
 

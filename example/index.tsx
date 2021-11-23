@@ -21,12 +21,17 @@ const App = () => {
         countdown.resume()
     }
 
+    const onReset = () => {
+        countdown.reset()
+    }
+
     return (
         <>
             <h1>⏳ useCountdown hook</h1>
             <h2>{countdown.formatted}</h2>
             <button onClick={onPause}>Pause</button>
             <button onClick={onResume}>Resume</button>
+            <button onClick={onReset}>Reset</button>
         </>
     )
 }
