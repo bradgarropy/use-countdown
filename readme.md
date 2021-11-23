@@ -89,18 +89,18 @@ const countdown = useCountdown({seconds: 10, format: "mm:ss:SS"})
 
 The return object is updated every second until the countdown timer ends.
 
-| Name         |    Type    |  Example   | Description                                                        |
-| :----------- | :--------: | :--------: | :----------------------------------------------------------------- |
-| `minutes`    |  `number`  |    `1`     | Remaining minutes.                                                 |
-| `seconds`    |  `number`  |    `30`    | Remaining seconds.                                                 |
-| `formatted`  |  `string`  |  `01:30`   | Formatted remaining time.                                          |
-| `isActive`   | `boolean`  |   `true`   | Indicates that the countdown is active, either running or paused.  |
-| `isInactive` | `boolean`  |  `false`   | Indicates that the countdown is inactive, and hasn't been started. |
-| `isRunning`  | `boolean`  |   `true`   | Indicates that the countdown is running.                           |
-| `isPaused`   | `boolean`  |  `false`   | Indicates that the countdown is paused.                            |
-| `pause`      | `function` | `function` | Pauses the countdown.                                              |
-| `resume`     | `function` | `function` | Resumes the countdown.                                             |
-| `reset`      | `function` | `function` | Resets the countdown.                                              |
+| Name         |    Type    |  Example   | Description                                                               |
+| :----------- | :--------: | :--------: | :------------------------------------------------------------------------ |
+| `minutes`    |  `number`  |    `1`     | Remaining minutes.                                                        |
+| `seconds`    |  `number`  |    `30`    | Remaining seconds.                                                        |
+| `formatted`  |  `string`  |  `01:30`   | Formatted remaining time.                                                 |
+| `isActive`   | `boolean`  |   `true`   | Indicates that the countdown is active, either running or paused.         |
+| `isInactive` | `boolean`  |  `false`   | Indicates that the countdown is inactive, and has finished counting down. |
+| `isRunning`  | `boolean`  |   `true`   | Indicates that the countdown is running.                                  |
+| `isPaused`   | `boolean`  |  `false`   | Indicates that the countdown is paused.                                   |
+| `pause`      | `function` | `function` | Pauses the countdown.                                                     |
+| `resume`     | `function` | `function` | Resumes the countdown.                                                    |
+| `reset`      | `function` | `function` | Resets the countdown.                                                     |
 
 Here is an example of the returned object.
 
