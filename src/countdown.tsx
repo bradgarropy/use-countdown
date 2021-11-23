@@ -77,12 +77,12 @@ const useCountdown = ({
             return
         }
 
+        window.clearInterval(id.current)
+
         setIsActive(true)
         setIsInactive(false)
         setIsRunning(false)
         setIsPaused(true)
-
-        window.clearInterval(id.current)
     }
 
     const resume = (): void => {
