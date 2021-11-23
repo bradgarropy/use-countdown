@@ -15,8 +15,13 @@ type Countdown = {
     minutes: number
     seconds: number
     formatted: string
+    isActive: boolean
+    isInactive: boolean
+    isRunning: boolean
+    isPaused: boolean
     pause: VoidFunction
     resume: VoidFunction
+    reset: VoidFunction
 }
 
 export {Countdown, Time}
