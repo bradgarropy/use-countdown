@@ -1,7 +1,7 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
 
-import useCountdown from "../."
+import useCountdown from "../src"
 
 const App = () => {
     const countdown = useCountdown({
