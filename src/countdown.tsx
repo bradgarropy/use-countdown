@@ -6,7 +6,7 @@ import {
     calculateRemainingMinutes,
     calculateRemainingSeconds,
 } from "./time"
-import {Countdown} from "./types"
+import {Countdown, Time} from "./types"
 
 type useCountdownParams = {
     minutes?: number
@@ -98,7 +98,7 @@ const useCountdown = ({
         setIsPaused(false)
     }
 
-    const reset = (): void => {
+    const reset = (time: Time = {minutes, seconds}) => {
         window.clearInterval(id.current)
         id.current = window.setInterval(calculateRemainingTime, 1000)
 
@@ -107,7 +107,7 @@ const useCountdown = ({
         setIsRunning(true)
         setIsPaused(false)
 
-        setRemainingTime(calculateInitialTime({minutes, seconds}))
+        setRemainingTime(calculateInitialTime(time))
     }
 
     const countdown: Countdown = {
