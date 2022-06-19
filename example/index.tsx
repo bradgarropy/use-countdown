@@ -25,6 +25,10 @@ const App = () => {
         countdown.reset()
     }
 
+    const onResetChange = () => {
+        countdown.reset({minutes: 2, seconds: 0})
+    }
+
     return (
         <>
             <h1>⏳ useCountdown hook</h1>
@@ -32,6 +36,7 @@ const App = () => {
             <button onClick={onPause}>Pause</button>
             <button onClick={onResume}>Resume</button>
             <button onClick={onReset}>Reset</button>
+            <button onClick={onResetChange}>Reset to 2:00</button>
         </>
     )
 }
