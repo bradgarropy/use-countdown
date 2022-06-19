@@ -234,7 +234,7 @@ describe("resume", () => {
 })
 
 describe("reset", () => {
-    test("resets", () => {
+    test("resets to same time", () => {
         const {result} = renderHook(() =>
             useCountdown({minutes: 1, seconds: 30}),
         )
@@ -262,6 +262,41 @@ describe("reset", () => {
             minutes: 1,
             seconds: 29,
             formatted: "01:29",
+            isActive: true,
+            isInactive: false,
+            isRunning: true,
+            isPaused: false,
+        })
+    })
+
+    test("resets to new time", () => {
+        const {result} = renderHook(() =>
+            useCountdown({minutes: 1, seconds: 30}),
+        )
+
+        act(() => {
+            jest.advanceTimersByTime(1000)
+            result.current.reset({minutes: 2, seconds: 15})
+        })
+
+        expect(result.current).toMatchObject({
+            minutes: 2,
+            seconds: 15,
+            formatted: "02:15",
+            isActive: true,
+            isInactive: false,
+            isRunning: true,
+            isPaused: false,
+        })
+
+        act(() => {
+            jest.advanceTimersByTime(1000)
+        })
+
+        expect(result.current).toMatchObject({
+            minutes: 2,
+            seconds: 14,
+            formatted: "02:14",
             isActive: true,
             isInactive: false,
             isRunning: true,
