@@ -30,7 +30,7 @@ npm install @bradgarropy/use-countdown
 
 In any React component, import `useCountdown`, then call it like any other [hook][hooks]. The returned `countdown` value will update every second with the remaining time.
 
-```javascript
+```typescript
 import useCountdown from "@bradgarropy/use-countdown"
 
 const App = () => {
@@ -71,7 +71,7 @@ If provided, the `onCompleted` function will be called when the countdown comple
 
 Here are some examples of how to call `useCountdown`.
 
-```javascript
+```typescript
 const countdown = useCountdown({
     minutes: 1,
     seconds: 30,
@@ -104,7 +104,7 @@ The return object is updated every second until the countdown timer ends.
 
 Here is an example of the returned object.
 
-```javascript
+```typescript
 {
     minutes: 1,
     seconds: 30,
@@ -113,9 +113,9 @@ Here is an example of the returned object.
     isInactive: false,
     isRunning: true,
     isPaused: false,
-    pause: () => {},
-    resume: () => {},
-    reset: () => {},
+    pause: () => void,
+    resume: () => void,
+    reset: (time?: Time) => void,
 }
 ```
 

@@ -21,7 +21,7 @@ type Countdown = {
     isPaused: boolean
     pause: VoidFunction
     resume: VoidFunction
-    reset: VoidFunction
+    reset: (time?: Time) => void
 }
 
 export {Countdown, Time}
