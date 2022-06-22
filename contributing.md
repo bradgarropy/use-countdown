@@ -98,6 +98,7 @@ I appreciate any and all types of contributions to this project! Contributors ar
     <td align="center"><a href="http://stevencreates.tech"><img src="https://avatars.githubusercontent.com/u/37391025?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Steven Hofheins</b></sub></a><br /><a href="#blog-StevenCreates" title="Blogposts">📝</a> <a href="#tutorial-StevenCreates" title="Tutorials">✅</a></td>
     <td align="center"><a href="http://fish.solar"><img src="https://avatars.githubusercontent.com/u/66899904?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jack Reiker</b></sub></a><br /><a href="#ideas-rpxs" title="Ideas, Planning, & Feedback">🤔</a> <a href="#userTesting-rpxs" title="User Testing">📓</a></td>
     <td align="center"><a href="https://github.com/Mehdmhd"><img src="https://avatars.githubusercontent.com/u/40036740?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mehdi Makhloufi</b></sub></a><br /><a href="#ideas-Mehdmhd" title="Ideas, Planning, & Feedback">🤔</a> <a href="#userTesting-Mehdmhd" title="User Testing">📓</a></td>
+    <td align="center"><a href="https://github.com/SirIsaacNeutron"><img src="https://avatars.githubusercontent.com/u/36581033?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Daniel Badir</b></sub></a><br /><a href="https://github.com/bradgarropy/use-countdown/issues?q=author%3ASirIsaacNeutron" title="Bug reports">🐛</a> <a href="#ideas-SirIsaacNeutron" title="Ideas, Planning, & Feedback">🤔</a> <a href="#userTesting-SirIsaacNeutron" title="User Testing">📓</a></td>
   </tr>
 </table>
 
