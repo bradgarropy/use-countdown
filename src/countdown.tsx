@@ -57,7 +57,7 @@ const useCountdown = ({
     const calculateRemainingTime = () => {
         setRemainingTime(time => {
             if (time - 1000 <= 0) {
-                clearInterval(id.current)
+                window.clearInterval(id.current)
                 onCompleted?.()
 
                 setIsActive(false)
