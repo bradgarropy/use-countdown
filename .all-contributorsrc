@@ -93,6 +93,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "ndimatteo",
+      "name": "Nick DiMatteo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/737188?v=4",
+      "profile": "http://nickdimatteo.com",
+      "contributions": [
+        "bug"
+      ]
     }
-  ]
+  ],
+  "commitConvention": "angular"
 }
