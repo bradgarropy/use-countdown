@@ -89,7 +89,7 @@ const useCountdown = ({
         setIsPaused(true)
     }
 
-    const resume = (): void => {
+    const start = (): void => {
         if (isRunning) {
             return
         }
@@ -104,12 +104,20 @@ const useCountdown = ({
 
     const reset = (time: Time = {minutes, seconds}) => {
         window.clearInterval(id.current)
-        id.current = window.setInterval(calculateRemainingTime, 1000)
 
-        setIsActive(true)
-        setIsInactive(false)
-        setIsRunning(true)
-        setIsPaused(false)
+        if (autoStart) {
+            id.current = window.setInterval(calculateRemainingTime, 1000)
+
+            setIsActive(true)
+            setIsInactive(false)
+            setIsRunning(true)
+            setIsPaused(false)
+        } else {
+            setIsActive(false)
+            setIsInactive(true)
+            setIsRunning(false)
+            setIsPaused(false)
+        }
 
         setRemainingTime(calculateInitialTime(time))
     }
@@ -122,8 +130,9 @@ const useCountdown = ({
         isInactive,
         isRunning,
         isPaused,
+        start,
         pause,
-        resume,
+        resume: start,
         reset,
     }
 

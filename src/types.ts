@@ -19,6 +19,7 @@ type Countdown = {
     isInactive: boolean
     isRunning: boolean
     isPaused: boolean
+    start: VoidFunction
     pause: VoidFunction
     resume: VoidFunction
     reset: (time?: Time) => void
