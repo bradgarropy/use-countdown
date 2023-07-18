@@ -12,6 +12,7 @@ type useCountdownParams = {
     minutes?: number
     seconds?: number
     format?: string
+    autoStart?: boolean
     onCompleted?: VoidFunction
 }
 
@@ -23,6 +24,7 @@ const useCountdown = ({
     minutes = 0,
     seconds = 0,
     format = "mm:ss",
+    autoStart = false,
     onCompleted,
 }: useCountdownParams = {}): Countdown => {
     const id = useRef(0)
@@ -40,12 +42,14 @@ const useCountdown = ({
 
     useEffect(
         () => {
-            id.current = window.setInterval(calculateRemainingTime, 1000)
+            if (autoStart) {
+                id.current = window.setInterval(calculateRemainingTime, 1000)
 
-            setIsActive(true)
-            setIsInactive(false)
-            setIsRunning(true)
-            setIsPaused(false)
+                setIsActive(true)
+                setIsInactive(false)
+                setIsRunning(true)
+                setIsPaused(false)
+            }
 
             return () => window.clearInterval(id.current)
         },
