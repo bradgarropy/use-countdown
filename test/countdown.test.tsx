@@ -14,9 +14,9 @@ describe("countdown", () => {
             minutes: 1,
             seconds: 30,
             formatted: "01:30",
-            isActive: true,
-            isInactive: false,
-            isRunning: true,
+            isActive: false,
+            isInactive: true,
+            isRunning: false,
             isPaused: false,
         })
     })
@@ -30,9 +30,9 @@ describe("countdown", () => {
             minutes: 1,
             seconds: 30,
             formatted: "01:30:00",
-            isActive: true,
-            isInactive: false,
-            isRunning: true,
+            isActive: false,
+            isInactive: true,
+            isRunning: false,
             isPaused: false,
         })
     })
@@ -44,9 +44,9 @@ describe("countdown", () => {
             minutes: 0,
             seconds: 30,
             formatted: "00:30",
-            isActive: true,
-            isInactive: false,
-            isRunning: true,
+            isActive: false,
+            isInactive: true,
+            isRunning: false,
             isPaused: false,
         })
     })
@@ -58,9 +58,9 @@ describe("countdown", () => {
             minutes: 1,
             seconds: 0,
             formatted: "01:00",
-            isActive: true,
-            isInactive: false,
-            isRunning: true,
+            isActive: false,
+            isInactive: true,
+            isRunning: false,
             isPaused: false,
         })
     })
@@ -72,6 +72,30 @@ describe("countdown", () => {
             minutes: 0,
             seconds: 0,
             formatted: "00:00",
+            isActive: false,
+            isInactive: true,
+            isRunning: false,
+            isPaused: false,
+        })
+    })
+
+    test("counts down", () => {
+        const {result} = renderHook(() =>
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
+        )
+
+        act(() => {
+            jest.advanceTimersByTime(1000)
+        })
+
+        expect(result.current).toMatchObject({
+            minutes: 1,
+            seconds: 29,
+            formatted: "01:29",
             isActive: true,
             isInactive: false,
             isRunning: true,
@@ -79,9 +103,13 @@ describe("countdown", () => {
         })
     })
 
-    test("counts down", () => {
+    test("automatically starts", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -103,7 +131,11 @@ describe("countdown", () => {
 describe("pause", () => {
     test("pauses", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -138,7 +170,11 @@ describe("pause", () => {
 
     test("does not pause when paused", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -163,7 +199,11 @@ describe("pause", () => {
 
     test("does not pause when inactive", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -186,7 +226,11 @@ describe("pause", () => {
 describe("resume", () => {
     test("resumes", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -212,7 +256,11 @@ describe("resume", () => {
 
     test("does not resume when running", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -236,7 +284,11 @@ describe("resume", () => {
 describe("reset", () => {
     test("resets to same time", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -271,7 +323,11 @@ describe("reset", () => {
 
     test("resets to new time", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -303,12 +359,51 @@ describe("reset", () => {
             isPaused: false,
         })
     })
+
+    test("does not automatically start on reset", () => {
+        const {result} = renderHook(() =>
+            useCountdown({minutes: 1, seconds: 30}),
+        )
+
+        act(() => {
+            jest.advanceTimersByTime(1000)
+            result.current.reset()
+        })
+
+        expect(result.current).toMatchObject({
+            minutes: 1,
+            seconds: 30,
+            formatted: "01:30",
+            isActive: false,
+            isInactive: true,
+            isRunning: false,
+            isPaused: false,
+        })
+
+        act(() => {
+            jest.advanceTimersByTime(1000)
+        })
+
+        expect(result.current).toMatchObject({
+            minutes: 1,
+            seconds: 30,
+            formatted: "01:30",
+            isActive: false,
+            isInactive: true,
+            isRunning: false,
+            isPaused: false,
+        })
+    })
 })
 
 describe("stop", () => {
     test("stops", () => {
         const {result} = renderHook(() =>
-            useCountdown({minutes: 1, seconds: 30}),
+            useCountdown({
+                minutes: 1,
+                seconds: 30,
+                autoStart: true,
+            }),
         )
 
         act(() => {
@@ -335,6 +430,7 @@ describe("onCompleted", () => {
             useCountdown({
                 minutes: 1,
                 seconds: 30,
+                autoStart: true,
                 onCompleted: onCompletedMock,
             }),
         )

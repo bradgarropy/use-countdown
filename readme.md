@@ -38,6 +38,7 @@ const App = () => {
         minutes: 1,
         seconds: 30,
         format: "mm:ss",
+        autoStart: true,
         onCompleted: () => console.log("onCompleted"),
     })
 
@@ -56,12 +57,13 @@ const App = () => {
 
 ### `useCountdown({minutes, seconds})`
 
-| Name          | Required |   Default   |  Example   | Description                                |
-| :------------ | :------: | :---------: | :--------: | :----------------------------------------- |
-| `minutes`     | `false`  |     `0`     |    `1`     | Countdown minutes.                         |
-| `seconds`     | `false`  |     `0`     |    `30`    | Countdown seconds.                         |
-| `format`      | `false`  |   `mm:ss`   | `mm:ss:SS` | Format string ([reference][format]).       |
-| `onCompleted` | `false`  | `undefined` | `function` | Function to call when countdown completes. |
+| Name          | Required |   Default   |  Example   | Description                                          |
+| :------------ | :------: | :---------: | :--------: | :--------------------------------------------------- |
+| `minutes`     | `false`  |     `0`     |    `1`     | Countdown minutes.                                   |
+| `seconds`     | `false`  |     `0`     |    `30`    | Countdown seconds.                                   |
+| `format`      | `false`  |   `mm:ss`   | `mm:ss:SS` | Format string ([reference][format]).                 |
+| `autoStart`   | `false`  |   `false`   |   `true`   | Whether or not to automatically start the countdown. |
+| `onCompleted` | `false`  | `undefined` | `function` | Function to call when countdown completes.           |
 
 Starts a countdown timer based on the number of minutes and seconds provided. The returned `countdown` object updates once per second and stops when the timer hits zero.
 
@@ -76,6 +78,7 @@ const countdown = useCountdown({
     minutes: 1,
     seconds: 30,
     format: "mm:ss:SS",
+    autoStart: true,
     onCompleted: () => console.log("onCompleted"),
 })
 

@@ -8,10 +8,15 @@ const App = () => {
         minutes: 1,
         seconds: 30,
         format: "mm:ss",
+        autoStart: false,
         onCompleted: () => console.log("onCompleted"),
     })
 
     console.log(countdown)
+
+    const onStart = () => {
+        countdown.start()
+    }
 
     const onPause = () => {
         countdown.pause()
@@ -33,10 +38,12 @@ const App = () => {
         <>
             <h1>⏳ useCountdown hook</h1>
             <h2>{countdown.formatted}</h2>
+            <button onClick={onStart}>Start</button>
             <button onClick={onPause}>Pause</button>
             <button onClick={onResume}>Resume</button>
             <button onClick={onReset}>Reset</button>
             <button onClick={onResetChange}>Reset to 2:00</button>
+            <pre>{JSON.stringify(countdown, null, 2)}</pre>
         </>
     )
 }
