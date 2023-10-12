@@ -102,7 +102,17 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "msopacua",
+      "name": "msopacua",
+      "avatar_url": "https://avatars.githubusercontent.com/u/144725145?v=4",
+      "profile": "https://github.com/msopacua",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
