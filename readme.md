@@ -147,6 +147,7 @@ Here is an example of the returned object.
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bboydflo"><img src="https://avatars.githubusercontent.com/u/2241459?v=4?s=100" width="100px;" alt="Florin Cosmin"/><br /><sub><b>Florin Cosmin</b></sub></a><br /><a href="https://github.com/bradgarropy/use-countdown/commits?author=bboydflo" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://nickdimatteo.com"><img src="https://avatars.githubusercontent.com/u/737188?v=4?s=100" width="100px;" alt="Nick DiMatteo"/><br /><sub><b>Nick DiMatteo</b></sub></a><br /><a href="https://github.com/bradgarropy/use-countdown/issues?q=author%3Andimatteo" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://nunofonseca.net"><img src="https://avatars.githubusercontent.com/u/5241920?v=4?s=100" width="100px;" alt="Nuno Fonseca"/><br /><sub><b>Nuno Fonseca</b></sub></a><br /><a href="#ideas-nfplay" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://jimmylongley.com"><img src="https://avatars.githubusercontent.com/u/1380097?v=4?s=100" width="100px;" alt="Jimmy Longley"/><br /><sub><b>Jimmy Longley</b></sub></a><br /><a href="#ideas-JLongley" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
