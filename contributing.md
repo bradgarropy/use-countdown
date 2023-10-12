@@ -107,6 +107,7 @@ I appreciate any and all types of contributions to this project! Contributors ar
       <td align="center" valign="top" width="14.28%"><a href="http://jimmylongley.com"><img src="https://avatars.githubusercontent.com/u/1380097?v=4?s=100" width="100px;" alt="Jimmy Longley"/><br /><sub><b>Jimmy Longley</b></sub></a><br /><a href="#ideas-JLongley" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://nunofonseca.net"><img src="https://avatars.githubusercontent.com/u/5241920?v=4?s=100" width="100px;" alt="Nuno Fonseca"/><br /><sub><b>Nuno Fonseca</b></sub></a><br /><a href="#ideas-nfplay" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/narthur"><img src="https://avatars.githubusercontent.com/u/4655422?v=4?s=100" width="100px;" alt="Nathan Arthur"/><br /><sub><b>Nathan Arthur</b></sub></a><br /><a href="https://github.com/bradgarropy/use-countdown/issues?q=author%3Anarthur" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/msopacua"><img src="https://avatars.githubusercontent.com/u/144725145?v=4?s=100" width="100px;" alt="msopacua"/><br /><sub><b>msopacua</b></sub></a><br /><a href="https://github.com/bradgarropy/use-countdown/issues?q=author%3Amsopacua" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
