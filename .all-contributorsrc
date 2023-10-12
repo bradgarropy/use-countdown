@@ -102,7 +102,17 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "JLongley",
+      "name": "Jimmy Longley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1380097?v=4",
+      "profile": "http://jimmylongley.com",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
