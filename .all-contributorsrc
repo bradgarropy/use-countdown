@@ -120,6 +120,15 @@
             "contributions": [
                 "ideas"
             ]
+        },
+        {
+            "login": "narthur",
+            "name": "Nathan Arthur",
+            "avatar_url": "https://avatars.githubusercontent.com/u/4655422?v=4",
+            "profile": "https://github.com/narthur",
+            "contributions": [
+                "bug"
+            ]
         }
     ],
     "commitConvention": "angular",
