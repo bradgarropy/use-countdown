@@ -1,118 +1,127 @@
 {
-  "projectName": "use-countdown",
-  "projectOwner": "bradgarropy",
-  "repoType": "github",
-  "repoHost": "https://github.com",
-  "files": [
-    "readme.md",
-    "contributing.md"
-  ],
-  "imageSize": 100,
-  "contributorsPerLine": 7,
-  "contributorsSortAlphabetically": false,
-  "skipCi": false,
-  "contributors": [
-    {
-      "login": "bradgarropy",
-      "name": "Brad Garropy",
-      "avatar_url": "https://avatars.githubusercontent.com/u/11336745?v=4",
-      "profile": "https://bradgarropy.com",
-      "contributions": [
-        "code",
-        "doc",
-        "test",
-        "infra"
-      ]
-    },
-    {
-      "login": "visormatt",
-      "name": "Matthew Scholta",
-      "avatar_url": "https://avatars.githubusercontent.com/u/545829?v=4",
-      "profile": "https://www.mattscholta.com",
-      "contributions": [
-        "code",
-        "doc"
-      ]
-    },
-    {
-      "login": "jamesqquick",
-      "name": "James Q Quick",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5391915?v=4",
-      "profile": "http://jamesqquick.com",
-      "contributions": [
-        "ideas",
-        "userTesting"
-      ]
-    },
-    {
-      "login": "StevenCreates",
-      "name": "Steven Hofheins",
-      "avatar_url": "https://avatars.githubusercontent.com/u/37391025?v=4",
-      "profile": "http://stevencreates.tech",
-      "contributions": [
-        "blog",
-        "tutorial"
-      ]
-    },
-    {
-      "login": "rpxs",
-      "name": "Jack Reiker",
-      "avatar_url": "https://avatars.githubusercontent.com/u/66899904?v=4",
-      "profile": "http://fish.solar",
-      "contributions": [
-        "ideas",
-        "userTesting"
-      ]
-    },
-    {
-      "login": "Mehdmhd",
-      "name": "Mehdi Makhloufi",
-      "avatar_url": "https://avatars.githubusercontent.com/u/40036740?v=4",
-      "profile": "https://github.com/Mehdmhd",
-      "contributions": [
-        "ideas",
-        "userTesting"
-      ]
-    },
-    {
-      "login": "SirIsaacNeutron",
-      "name": "Daniel Badir",
-      "avatar_url": "https://avatars.githubusercontent.com/u/36581033?v=4",
-      "profile": "https://github.com/SirIsaacNeutron",
-      "contributions": [
-        "bug",
-        "ideas",
-        "userTesting"
-      ]
-    },
-    {
-      "login": "bboydflo",
-      "name": "Florin Cosmin",
-      "avatar_url": "https://avatars.githubusercontent.com/u/2241459?v=4",
-      "profile": "https://github.com/bboydflo",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
-      "login": "ndimatteo",
-      "name": "Nick DiMatteo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/737188?v=4",
-      "profile": "http://nickdimatteo.com",
-      "contributions": [
-        "bug"
-      ]
-    },
-    {
-      "login": "nfplay",
-      "name": "Nuno Fonseca",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5241920?v=4",
-      "profile": "http://nunofonseca.net",
-      "contributions": [
-        "ideas"
-      ]
-    }
-  ],
-  "commitConvention": "angular",
-  "commitType": "docs"
+    "projectName": "use-countdown",
+    "projectOwner": "bradgarropy",
+    "repoType": "github",
+    "repoHost": "https://github.com",
+    "files": [
+        "readme.md",
+        "contributing.md"
+    ],
+    "imageSize": 100,
+    "contributorsPerLine": 7,
+    "contributorsSortAlphabetically": false,
+    "skipCi": false,
+    "contributors": [
+        {
+            "login": "bradgarropy",
+            "name": "Brad Garropy",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11336745?v=4",
+            "profile": "https://bradgarropy.com",
+            "contributions": [
+                "code",
+                "doc",
+                "test",
+                "infra"
+            ]
+        },
+        {
+            "login": "visormatt",
+            "name": "Matthew Scholta",
+            "avatar_url": "https://avatars.githubusercontent.com/u/545829?v=4",
+            "profile": "https://www.mattscholta.com",
+            "contributions": [
+                "code",
+                "doc"
+            ]
+        },
+        {
+            "login": "jamesqquick",
+            "name": "James Q Quick",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5391915?v=4",
+            "profile": "http://jamesqquick.com",
+            "contributions": [
+                "ideas",
+                "userTesting"
+            ]
+        },
+        {
+            "login": "StevenCreates",
+            "name": "Steven Hofheins",
+            "avatar_url": "https://avatars.githubusercontent.com/u/37391025?v=4",
+            "profile": "http://stevencreates.tech",
+            "contributions": [
+                "blog",
+                "tutorial"
+            ]
+        },
+        {
+            "login": "rpxs",
+            "name": "Jack Reiker",
+            "avatar_url": "https://avatars.githubusercontent.com/u/66899904?v=4",
+            "profile": "http://fish.solar",
+            "contributions": [
+                "ideas",
+                "userTesting"
+            ]
+        },
+        {
+            "login": "Mehdmhd",
+            "name": "Mehdi Makhloufi",
+            "avatar_url": "https://avatars.githubusercontent.com/u/40036740?v=4",
+            "profile": "https://github.com/Mehdmhd",
+            "contributions": [
+                "ideas",
+                "userTesting"
+            ]
+        },
+        {
+            "login": "SirIsaacNeutron",
+            "name": "Daniel Badir",
+            "avatar_url": "https://avatars.githubusercontent.com/u/36581033?v=4",
+            "profile": "https://github.com/SirIsaacNeutron",
+            "contributions": [
+                "bug",
+                "ideas",
+                "userTesting"
+            ]
+        },
+        {
+            "login": "bboydflo",
+            "name": "Florin Cosmin",
+            "avatar_url": "https://avatars.githubusercontent.com/u/2241459?v=4",
+            "profile": "https://github.com/bboydflo",
+            "contributions": [
+                "code"
+            ]
+        },
+        {
+            "login": "ndimatteo",
+            "name": "Nick DiMatteo",
+            "avatar_url": "https://avatars.githubusercontent.com/u/737188?v=4",
+            "profile": "http://nickdimatteo.com",
+            "contributions": [
+                "bug"
+            ]
+        },
+        {
+            "login": "nfplay",
+            "name": "Nuno Fonseca",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5241920?v=4",
+            "profile": "http://nunofonseca.net",
+            "contributions": [
+                "ideas"
+            ]
+        },
+        {
+            "login": "JLongley",
+            "name": "Jimmy Longley",
+            "avatar_url": "https://avatars.githubusercontent.com/u/1380097?v=4",
+            "profile": "http://jimmylongley.com",
+            "contributions": [
+                "ideas"
+            ]
+        }
+    ],
+    "commitConvention": "angular",
+    "commitType": "docs"
 }
