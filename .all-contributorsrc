@@ -102,7 +102,17 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "nfplay",
+      "name": "Nuno Fonseca",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5241920?v=4",
+      "profile": "http://nunofonseca.net",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
-  "commitConvention": "angular"
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
