@@ -16,6 +16,12 @@ type useCountdownParams = {
     onCompleted?: VoidFunction
 }
 
+enum CountdownStatus {
+    Inactive,
+    Running,
+    Paused,
+}
+
 /**
  * @name useCountdown
  * @description React hook countdown timer.
@@ -35,20 +41,16 @@ const useCountdown = ({
     )
 
     // status
-    const [isActive, setIsActive] = useState(false)
-    const [isInactive, setIsInactive] = useState(true)
-    const [isRunning, setIsRunning] = useState(false)
-    const [isPaused, setIsPaused] = useState(false)
+    const [status, setStatus] = useState<CountdownStatus>(
+        CountdownStatus.Inactive,
+    )
 
     useEffect(
         () => {
             if (autoStart) {
                 id.current = window.setInterval(calculateRemainingTime, 1000)
 
-                setIsActive(true)
-                setIsInactive(false)
-                setIsRunning(true)
-                setIsPaused(false)
+                setStatus(CountdownStatus.Running)
             }
 
             return () => window.clearInterval(id.current)
@@ -64,10 +66,7 @@ const useCountdown = ({
                 window.clearInterval(id.current)
                 onCompleted?.()
 
-                setIsActive(false)
-                setIsInactive(true)
-                setIsRunning(false)
-                setIsPaused(false)
+                setStatus(CountdownStatus.Inactive)
 
                 return 0
             }
@@ -77,29 +76,26 @@ const useCountdown = ({
     }
 
     const pause = (): void => {
-        if (isPaused || isInactive) {
+        if (
+            status === CountdownStatus.Paused ||
+            status === CountdownStatus.Inactive
+        ) {
             return
         }
 
         window.clearInterval(id.current)
 
-        setIsActive(true)
-        setIsInactive(false)
-        setIsRunning(false)
-        setIsPaused(true)
+        setStatus(CountdownStatus.Paused)
     }
 
     const start = (): void => {
-        if (isRunning) {
+        if (status === CountdownStatus.Running) {
             return
         }
 
         id.current = window.setInterval(calculateRemainingTime, 1000)
 
-        setIsActive(true)
-        setIsInactive(false)
-        setIsRunning(true)
-        setIsPaused(false)
+        setStatus(CountdownStatus.Running)
     }
 
     const reset = (time: Time = {minutes, seconds}) => {
@@ -108,15 +104,9 @@ const useCountdown = ({
         if (autoStart) {
             id.current = window.setInterval(calculateRemainingTime, 1000)
 
-            setIsActive(true)
-            setIsInactive(false)
-            setIsRunning(true)
-            setIsPaused(false)
+            setStatus(CountdownStatus.Running)
         } else {
-            setIsActive(false)
-            setIsInactive(true)
-            setIsRunning(false)
-            setIsPaused(false)
+            setStatus(CountdownStatus.Inactive)
         }
 
         setRemainingTime(calculateInitialTime(time))
@@ -126,10 +116,12 @@ const useCountdown = ({
         minutes: calculateRemainingMinutes(remainingTime),
         seconds: calculateRemainingSeconds(remainingTime),
         formatted: formatTime(remainingTime, format),
-        isActive,
-        isInactive,
-        isRunning,
-        isPaused,
+        isActive:
+            status === CountdownStatus.Running ||
+            status === CountdownStatus.Paused,
+        isInactive: status === CountdownStatus.Inactive,
+        isRunning: status === CountdownStatus.Running,
+        isPaused: status === CountdownStatus.Paused,
         start,
         pause,
         resume: start,
